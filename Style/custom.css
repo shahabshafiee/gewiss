@@ -85,11 +85,15 @@ ul.nav a:hover { color: #fff !important; }
 
 
         #citydb_layerlistpanel {
+            
             width: 100%;
             background: rgba(42, 42, 42, 0.8);
             text-align: left;
         }
 
+#citydb_layerlistpanel input{
+    margin-right: 5px;
+        }
         #citydb_layerlistpanel label:hover {
             background-color: #1e90ff;
         }
