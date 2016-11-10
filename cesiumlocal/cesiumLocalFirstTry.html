@@ -1,0 +1,282 @@
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+          <title>cesiumlocal.html</title>
+          <meta charset="utf-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+          <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+          <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+            <script src="../Build/Cesium/Cesium.js"></script>
+
+<script src="../ThirdParty/Cesium/Cesium.js"></script> 
+<script src="../ThirdParty/Intersection/IntersectionAPI.js"></script>
+<script src="../ThirdParty/Cesium-Navigation/Cesium-Navigation.js"></script>
+<link rel="stylesheet" type="text/css" href="../ThirdParty/Cesium-Navigation/Cesium-Navigation.css" />
+<script src="../js/3dcitydb-web-map.js"></script>  
+<script src="../js/CitydbUtil.js"></script>  
+<script src="../js/CitydbWebworker.js"></script>
+<script src="../js/CitydbSceneTransforms.js"></script> 
+<script src="../js/CitydbKmlHighlightingManager.js"></script>   
+<script src="../js/CitydbKmlTilingManager.js"></script>  
+<script src="../js/CitydbKmlDataSource.js"></script>    
+<script src="../js/CitydbKmlLayer.js"></script>
+<script src="../js/b3dmlayer.js"></script>
+            <style>
+
+                 @import url(../Build/Cesium/Widgets/widgets.css);
+
+            /* Remove the navbar's default margin-bottom and rounded borders */
+            .navbar {
+              margin-bottom: 0;
+              border-radius: 0;
+            }
+
+            /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+            .row.content {height: 450px}
+
+            /* Set gray background color and 100% height */
+            .sidenav {
+              padding-top: 20px;
+              background-color: #f1f1f1;
+              height: 100%;
+                }
+
+            /* Set black background color, white text and some padding */
+            footer {
+              background-color: #555;
+              color: white;
+              padding: 5px;
+            }
+
+            /* On small screens, set height to 'auto' for sidenav and grid */
+            @media screen and (max-width: 767px) {
+              .sidenav {
+                height: auto;
+                padding: 15px;
+              }
+              .row.content {height:auto;}
+            }
+          </style>
+        </head>
+        <body>
+
+        <nav class="navbar navbar-inverse">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">Logo</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+              <ul class="nav navbar-nav navbar-right">
+                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+        <div class="container-fluid text-center">
+          <div class="row content">
+            <div class="col-sm-2 sidenav">
+              <p><a href="https://www.google.de" target="_blank">google</a></p>
+              <p><a href="https://cesiumjs.org/" target="_blank">cesium</a></p>
+              <p><a href="http://www.geomatik-hamburg.de/g2lab/research-gewiss.html" target="_blank">GEWISS</a></p>
+
+    
+            </div>
+
+
+              <!-- --------------------------------------------     Cesium    ------------------------------------------------------- -->
+
+            <div class="col-sm-8 text-left">
+
+              <h1>Welcome to GEWISS project</h1>
+                <div id="cesiumContainer"></div>
+                <div class="toolbar-left">
+                    
+                    
+            <button onclick="HWNfunction()" style="padding: 15px 10px;">Hamburg districts</button>
+            <button onclick="Hfunction()" style="padding: 15px 10px;">Hamburg </button>
+            <button onclick="Ufunction()" style="padding: 15px 10px;">Europe </button>
+            <button onclick="FacilityFunction()" style="padding: 15px 10px;">facilities</button>
+            <button onclick="HNfunction()" style="padding: 15px 10px;">Hamburg Nodes</button>
+            <button onclick="TestKMLFilesFunction()" style="padding: 15px 10px;">test kml files</button>
+                    
+        </div>
+                
+                
+                
+                
+<!-- ------------------------------------------     imageryProvider      ---------------------------------------------------- -->
+
+                
+                
+                <script>
+                    
+
+                    var viewer = new Cesium.Viewer('cesiumContainer', {
+     
+                imageryProvider : new Cesium.ArcGisMapServerImageryProvider({
+                    url : 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer'
+                }),
+     
+     
+                baseLayerPicker : false,
+            fullscreenButton:false
+     
+            });
+                
+                    
+                    
+                    
+                    
+                    
+//    var widget = new Cesium.CesiumWidget('cesiumContainer');
+//var url='http://localhost:8080/geoserver/wms'; //Geoserver URL
+//                    
+//                    
+//var layers = widget.scene.globe.imageryLayers;
+//    layers.removeAll();
+//                    
+//    layers.addImageryProvider(new Cesium.WebMapServiceImageryProvider({
+//        url : url,        
+//        layers: 'GIS_Demo'// Here just give layer name
+//    }));
+//
+//
+//
+//                    
+//                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+               
+                var options = {
+        camera : viewer.scene.camera,
+        canvas : viewer.scene.canvas
+    };
+
+                
+                
+                
+                
+     <!-- ------------------------------------------      functions     ---------------------------------------------------- -->
+
+            
+
+        function HWNfunction(){
+            viewer.dataSources.removeAll();
+                var dataSource2 = Cesium.GeoJsonDataSource.load(
+                    'https://raw.githubusercontent.com/shahabshafiee/rep/master/hamburg%20with%20neighborhoods.geojson');
+                 viewer.dataSources.add(dataSource2);
+               viewer.camera.flyTo({
+                        destination : Cesium.Cartesian3.fromDegrees(10, 53.55, 70000)})
+                   }
+
+           function  Hfunction() {
+               viewer.dataSources.removeAll();
+                var dataSource1 = Cesium.GeoJsonDataSource.load('https://raw.githubusercontent.com/shahabshafiee/rep/master/gemeinden_simplify200.geojson');
+                viewer.dataSources.add(dataSource1);
+                viewer.camera.flyTo({
+                        destination : Cesium.Cartesian3.fromDegrees(9.3, 53.7, 160000)})
+                   }
+
+            function     Ufunction(){
+                viewer.dataSources.removeAll();
+                viewer.camera.flyTo({
+                        destination : Cesium.Cartesian3.fromDegrees(15, 50, 4400000)})
+                   }
+
+
+
+                function FacilityFunction(){
+                    viewer.dataSources.removeAll();
+                viewer.camera.flyHome(0);
+            viewer.dataSources.add(Cesium.KmlDataSource.load('https://raw.githubusercontent.com/shahabshafiee/rep/master/facilities.kml', options));
+        }
+
+                
+        function  HNfunction() {
+               viewer.dataSources.removeAll();
+                var dataSource1 = Cesium.GeoJsonDataSource.load('https://raw.githubusercontent.com/shahabshafiee/rep/master/osm.geojson');
+                viewer.dataSources.add(dataSource1);
+                viewer.camera.flyTo({
+                        destination : Cesium.Cartesian3.fromDegrees(10.1, 53.6, 70000)})
+                   }
+
+                
+                
+                 function TestKMLFilesFunction(){
+                    viewer.dataSources.removeAll();
+//                viewer.camera.flyTo({
+//                        destination : Cesium.Cartesian3.fromDegrees(8.49590737935935, 53.9159371704516, 160)})
+           var datasourceTest=Cesium.KmlDataSource.load('/Cesium-1.24/Export3DCityDB/HH_collada_MasterJSON.json');
+                    viewer.zoomTo(datasourceTest);
+//                      viewer.camera.flyTo({
+//                        destination : Cesium.Cartesian3.fromDegrees(9, 53, 700)})
+                   
+//viewer.dataSources.add(Cesium.KmlDataSource.load('https://raw.githubusercontent.com/shahabshafiee/rep/master/test1.kml', options));
+//                     
+                     
+        }
+
+                
+                 <!-- ------------------------------------------   END OF Functions     ---------------------------------------------------- -->
+                
+            </script>
+              <hr>
+              <h4><a href="#col3Content" data-toggle="collapse">need more info?</a></h4>
+          <div id="col3Content" class="collapse">For more information please checkout cesium website</div>
+
+
+            </div>   
+              <div class="col-sm-2 sidenav">
+              <div class="well">
+                <p>TEST1</p>
+              </div>
+              <div class="well">
+                <p>TEST2</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+          <div class="container">
+
+
+            </div>
+
+
+
+
+
+            <footer class="colapse">
+          <p>sample footer text to be modified</p>
+        </footer>
+
+
+            <script>
+
+
+           
+        </script>
+        </body>
+        </html>
+
