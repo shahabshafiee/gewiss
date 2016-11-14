@@ -58,7 +58,7 @@ ul.nav a:hover { color: #fff !important; }
         }
 
         .citydb_dynamic_box input {
-            vertical-align: middle;
+            vertical-align: inherit;
             padding-top: 1px;
             padding-bottom: 1px;
         }

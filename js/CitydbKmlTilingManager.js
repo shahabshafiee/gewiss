@@ -296,13 +296,13 @@ var GlobeTileTaskQueue = {};
 //                                e.wall.outlineColor = Cesium.Color.RED.withAlpha(0.5);
 //                               console.log(e);
                                 
-                                 if (e._name == "DEHH_9d4c8b35-56b8-4fae-9228-46a2686391d8"){
-                                    
+                                /* if (e._name == "DEHH_9d4c8b35-56b8-4fae-9228-46a2686391d8"){
+
                                     e._children[0]._polygon._material._color._value.blue = 0; 
                             e._children[0]._polygon._material._color._value.red = 0; 
                             e._children[0]._polygon._material._color._value.green = 0; 
                             
-                                }
+                                }*/
                                 
                                     }
                       
