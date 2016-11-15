@@ -2,9 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c9bd9c08-992e-4249-baa4-84a9bd0049a0" name="Default" comment="">
+<<<<<<< HEAD
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Style/custom.css" afterPath="$PROJECT_DIR$/Style/custom.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThirdParty/Cesium-Navigation/Cesium-Navigation.css" afterPath="$PROJECT_DIR$/ThirdParty/Cesium-Navigation/Cesium-Navigation.css" />
+=======
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Style/custom.css" afterPath="$PROJECT_DIR$/Style/custom.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/CitydbKmlTilingManager.js" afterPath="$PROJECT_DIR$/js/CitydbKmlTilingManager.js" />
+>>>>>>> 01547c4633e1c08cd0cabdf7a91a2ef02f92949d
     </list>
     <ignored path="gewiss.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -75,6 +80,7 @@
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="custom.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Style/custom.css">
           <provider selected="true" editor-type-id="text-editor">
@@ -90,6 +96,13 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="290">
               <caret line="0" column="3902" selection-start-line="0" selection-start-column="3902" selection-end-line="0" selection-end-column="3902" />
+=======
+      <file leaf-file-name="custom.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Style/custom.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="258">
+              <caret line="60" column="36" selection-start-line="60" selection-start-column="36" selection-end-line="60" selection-end-column="36" />
+>>>>>>> 01547c4633e1c08cd0cabdf7a91a2ef02f92949d
               <folding />
             </state>
           </provider>
@@ -106,7 +119,10 @@
         <option value="$PROJECT_DIR$/cesiumlocal/index.html" />
         <option value="$PROJECT_DIR$/js/CitydbKmlTilingManager.js" />
         <option value="$PROJECT_DIR$/Style/custom.css" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/ThirdParty/Cesium-Navigation/Cesium-Navigation.css" />
+=======
+>>>>>>> 01547c4633e1c08cd0cabdf7a91a2ef02f92949d
       </list>
     </option>
   </component>
@@ -178,6 +194,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+<<<<<<< HEAD
               <option name="myItemId" value="ThirdParty" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -210,6 +227,8 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+=======
+>>>>>>> 01547c4633e1c08cd0cabdf7a91a2ef02f92949d
               <option name="myItemId" value="Style" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -324,18 +343,30 @@
       <option name="presentableId" value="Default" />
       <updated>1478789559461</updated>
       <workItem from="1478789561221" duration="211000" />
+<<<<<<< HEAD
       <workItem from="1479125392011" duration="1807000" />
+=======
+      <workItem from="1479125392011" duration="808000" />
+>>>>>>> 01547c4633e1c08cd0cabdf7a91a2ef02f92949d
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="2018000" />
+=======
+    <option name="totallyTimeSpent" value="1019000" />
+>>>>>>> 01547c4633e1c08cd0cabdf7a91a2ef02f92949d
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
+<<<<<<< HEAD
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23255815" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+=======
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23255815" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+>>>>>>> 01547c4633e1c08cd0cabdf7a91a2ef02f92949d
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -419,6 +450,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Style/custom.css">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="694">
           <caret line="148" column="1" selection-start-line="148" selection-start-column="1" selection-end-line="148" selection-end-column="1" />
           <folding />
@@ -429,6 +461,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="290">
           <caret line="0" column="3902" selection-start-line="0" selection-start-column="3902" selection-end-line="0" selection-end-column="3902" />
+=======
+        <state relative-caret-position="258">
+          <caret line="60" column="36" selection-start-line="60" selection-start-column="36" selection-end-line="60" selection-end-column="36" />
+>>>>>>> 01547c4633e1c08cd0cabdf7a91a2ef02f92949d
           <folding />
         </state>
       </provider>
