@@ -52,14 +52,24 @@
 
 	// set default input parameter value and bind the view and model
   	var addLayerViewModel = {
-		url : "http://localhost/dashboard/hh-complete-100-100/hh-complete_extruded_MasterJSON.json",
+
+
+		 url : "http://localhost/dashboard/hh-complete-100-100/hh-complete_extruded_MasterJSON.json",
 		name : "extruded",
 		thematicDataUrl: "https://www.google.com/fusiontables/DataSource?docid=1IKfUy39P82_fXBG8ncu9758AD2jlJMUYtFCiRTiK",
 		cityobjectsJsonUrl: "",
-		minLodPixels : "250",
-		maxLodPixels : "-1",
+		//for 100-100
+		//minLodPixels : "250",
+		/*
 		maxSizeOfCachedTiles : 70,
-		maxCountOfVisibleTiles : 30
+		maxCountOfVisibleTiles : 30*/
+
+
+		//for 500-00
+		minLodPixels : "10",
+		maxLodPixels : "-1",
+		maxSizeOfCachedTiles : 300,
+		maxCountOfVisibleTiles : 150
 	};  	
   	Cesium.knockout.track(addLayerViewModel);
 	Cesium.knockout.applyBindings(addLayerViewModel, document.getElementById('citydb_addlayerpanel'));
@@ -486,7 +496,7 @@
 				for (var i = 0; i < materials.length; i++) {
 					// do mouseOver highlighting
 					materials[i].setValue('emission',Cesium.Cartesian4.fromColor(mouseOverhighlightColor));
-                    console.log(materials[i]);
+                    console.log("materials[i]",materials[i]);
 				} 
 			}
 			else if (primitive instanceof Cesium.Primitive) {
@@ -547,20 +557,20 @@
 		})	 
 	 	
 		function _doMouseoverHighlighting(_childrenEntities, _primitive, _mouseOverhighlightColor) {
-			for (var i = 0; i < _childrenEntities.length; i++){	
-				var childEntity = _childrenEntities[i];							
+			for (var i = 0; i < _childrenEntities.length; i++){
+				var childEntity = _childrenEntities[i];
 				var attributes = _primitive.getGeometryInstanceAttributes(childEntity);
 //                console.log(childEntity);
-                
-               
+
+
 //                var tessssst="DEHH_9d4c8b35-56b8-4fae-9228-46a2686391d8".parent;
 //                console.log(tessssst);
-//                
+//
 				if (!Cesium.defined(childEntity.originalSurfaceColor)) {
 					childEntity.addProperty("originalSurfaceColor");
-				}						
+				}
 				childEntity.originalSurfaceColor = attributes.color;
-				attributes.color = Cesium.ColorGeometryInstanceAttribute.toValue(_mouseOverhighlightColor); 
+				attributes.color = Cesium.ColorGeometryInstanceAttribute.toValue(_mouseOverhighlightColor);
 			}
 		}
 		
@@ -1170,7 +1180,7 @@ function flyToHH(){
         
         orientation : {
         heading : Cesium.Math.toRadians(0),
-        pitch : Cesium.Math.toRadians(-60),
+        pitch : Cesium.Math.toRadians(-80),
         roll : 0.0
         }
         
@@ -1180,10 +1190,17 @@ function flyToHH(){
 }
                        
 function changeToFP(){
-    addLayerViewModel.url = "http://localhost/dashboard/hh-complete-100-100/hh-complete_footprint_MasterJSON.json",
+
+//500-500
+addLayerViewModel.url = "http://localhost/dashboard/500*500_FP_part/500_footprint_MasterJSON.json",
 		addLayerViewModel.name = "Footprint"
                             }
 
+//100-100
+    /*addLayerViewModel.url = "http://localhost/dashboard/hh-complete-100-100/hh-complete_footprint_MasterJSON.json",
+		addLayerViewModel.name = "Footprint"
+                            }
+*/
 function changeToEX(){
     addLayerViewModel.url = "http://localhost/dashboard/hh-complete-100-100/hh-complete_extruded_MasterJSON.json",
 		addLayerViewModel.name = "Extruded"
@@ -1195,6 +1212,12 @@ function changeToGE(){
 		addLayerViewModel.name = "Geometry"
                             }
 
+function Berlin(){
+    addLayerViewModel.url = "http://localhost/dashboard/Berlin_New/Berlin_Buildings_rgbTexture_collada_MasterJSON.json",
+
+        addLayerViewModel.name = "Berlin"
+
+}
 
 //var setRed = function(){
 //      setStyle(Cesium.Color.CRIMSON);

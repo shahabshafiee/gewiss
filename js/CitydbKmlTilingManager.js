@@ -292,18 +292,80 @@ var GlobeTileTaskQueue = {};
 //                                console.log("dataSource  ",dataSource);
 //                                console.log("i is ",i);
 //                                console.log("entities[",i,"]",e);
-                                
-//                                e.wall.outlineColor = Cesium.Color.RED.withAlpha(0.5);
-//                               console.log(e);
-                                
-                                /* if (e._name == "DEHH_9d4c8b35-56b8-4fae-9228-46a2686391d8"){
+                             fetchDataFromGoogleFusionTable(e._name, "https://www.google.com/fusiontables/DataSource?docid=1IKfUy39P82_fXBG8ncu9758AD2jlJMUYtFCiRTiK").then(function(kvp){
+			//console.log("kvp ",kvp["Total Heat demand [kWh/yr]"]);
+			THD= kvp["Total Heat demand [kWh/yr]"];
+			
+		}).otherwise(function(error) {
+			cesiumEntity.description = 'No feature information found';
+		});		
 
-                                    e._children[0]._polygon._material._color._value.blue = 0; 
-                            e._children[0]._polygon._material._color._value.red = 0; 
-                            e._children[0]._polygon._material._color._value.green = 0; 
-                            
-                                }*/
-                                
+//                                   
+console.log("THD is ",THD);
+								 
+
+								if (THD <=25){            
+                           
+                            e._children[0]._polygon._material._color._value.red = 0.2; 
+                            e._children[0]._polygon._material._color._value.green = 0.99; 
+                            e._children[0]._polygon._material._color._value.blue = 0.01;  
+                                }
+
+								if ( THD>25 && THD <=50 ){            
+                           
+                            e._children[0]._polygon._material._color._value.red = 0.51; 
+                            e._children[0]._polygon._material._color._value.green = 1; 
+                            e._children[0]._polygon._material._color._value.blue = 0.01;  
+                                }
+
+								if (THD <50 && THD>75){            
+                           
+                            e._children[0]._polygon._material._color._value.red = 0.64; 
+                            e._children[0]._polygon._material._color._value.green = 1; 
+                            e._children[0]._polygon._material._color._value.blue = 0.01;  
+                                }
+
+								if (THD <=75 && THD>100){            
+                           
+                            e._children[0]._polygon._material._color._value.red = 0.86; 
+                            e._children[0]._polygon._material._color._value.green = 0.99; 
+                            e._children[0]._polygon._material._color._value.blue = 0.01;  
+                                }
+
+								if (THD <=100 && THD>125){            
+                           
+                            e._children[0]._polygon._material._color._value.red = 0.95; 
+                            e._children[0]._polygon._material._color._value.green = 1; 
+                            e._children[0]._polygon._material._color._value.blue = 0.01;  
+                                }
+
+								if (THD <=125 && THD>150){            
+                           
+                            e._children[0]._polygon._material._color._value.red = 1; 
+                            e._children[0]._polygon._material._color._value.green = 0.96; 
+                            e._children[0]._polygon._material._color._value.blue = 0.01;  
+                                }
+
+								if (THD <=150 && THD>200){            
+                           
+                            e._children[0]._polygon._material._color._value.red = 1; 
+                            e._children[0]._polygon._material._color._value.green = 0.82; 
+                            e._children[0]._polygon._material._color._value.blue = 0.01;  
+                                }
+
+								if (THD <=200 && THD>250){            
+                           
+                            e._children[0]._polygon._material._color._value.red = 0.99; 
+                            e._children[0]._polygon._material._color._value.green = 0.51; 
+                            e._children[0]._polygon._material._color._value.blue = 0.01;  
+                                }
+
+								if (THD>250){            
+                           
+                            e._children[0]._polygon._material._color._value.red = 0.99; 
+                            e._children[0]._polygon._material._color._value.green = 0.29; 
+                            e._children[0]._polygon._material._color._value.blue = 0.01;  
+                                }
                                     }
                       
                         
