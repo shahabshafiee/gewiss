@@ -66,10 +66,10 @@
 
 
 		//for 500-00
-		minLodPixels : "10",
+		minLodPixels : "1",
 		maxLodPixels : "-1",
-		maxSizeOfCachedTiles : 300,
-		maxCountOfVisibleTiles : 150
+		maxSizeOfCachedTiles : 500,
+		maxCountOfVisibleTiles : 350
 	};  	
   	Cesium.knockout.track(addLayerViewModel);
 	Cesium.knockout.applyBindings(addLayerViewModel, document.getElementById('citydb_addlayerpanel'));
@@ -1174,13 +1174,13 @@ function flyToHH(){
     cesiumCamera.flyTo({
             
         
-                        destination : Cesium.Cartesian3.fromDegrees(10.093, 53.65, 500),
+                        destination : Cesium.Cartesian3.fromDegrees(9.993, 53.56, 500),
 //         destination : Cesium.Cartesian3.fromDegrees(9.99, 53.52, 8500),
       
         
         orientation : {
         heading : Cesium.Math.toRadians(0),
-        pitch : Cesium.Math.toRadians(-80),
+        pitch : Cesium.Math.toRadians(-90),
         roll : 0.0
         }
         
@@ -1191,16 +1191,25 @@ function flyToHH(){
                        
 function changeToFP(){
 
-//500-500
-addLayerViewModel.url = "http://localhost/dashboard/500*500_FP_part/500_footprint_MasterJSON.json",
-		addLayerViewModel.name = "Footprint"
-                            }
 
-//100-100
-    /*addLayerViewModel.url = "http://localhost/dashboard/hh-complete-100-100/hh-complete_footprint_MasterJSON.json",
+//1000-1000
+/*addLayerViewModel.url = "http://localhost/dashboard/1000-1000/1000-1000-FP_footprint_MasterJSON.json",
 		addLayerViewModel.name = "Footprint"
                             }
 */
+
+//500-500
+/*
+addLayerViewModel.url = "http://localhost/dashboard/500*500_FP_part/500_footprint_MasterJSON.json",
+		addLayerViewModel.name = "Footprint"
+} 
+*/       
+
+//100-100
+    addLayerViewModel.url = "http://localhost/dashboard/hh-complete-100-100/hh-complete_footprint_MasterJSON.json",
+		addLayerViewModel.name = "Footprint"
+                            }
+
 function changeToEX(){
     addLayerViewModel.url = "http://localhost/dashboard/hh-complete-100-100/hh-complete_extruded_MasterJSON.json",
 		addLayerViewModel.name = "Extruded"
