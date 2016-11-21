@@ -225,15 +225,24 @@ element.style {
     left: 5%;
     right: 5%;
     position: absolute;
+<<<<<<< HEAD
     width: 90%;
     height: 75%;
+=======
+    width: 85%;
+    height: 80%;
+>>>>>>> 87e78a591e163245ff39cfc5737a5848e4673620
     margin: 0;
     padding: 0px;
     overflow: hidden;
     z-index: -1;
+<<<<<<< HEAD
     border: 5px;
     border-style: solid;
     border-bottom-color: black;
+=======
+    border: 50px;
+>>>>>>> 87e78a591e163245ff39cfc5737a5848e4673620
 }
 
 #uiMenu {
