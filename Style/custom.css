@@ -5,8 +5,15 @@
 
 }
 ul.nav a:hover { color: #fff !important; }
-.navbar-default{
-<<<<<<< HEAD
+
+
+element.style {
+    background: rgba(255, 255, 255, 1);
+    border-color: rgba(95, 95, 95, 0.5);
+    
+}
+.bottom-container{
+
 
 }
 
@@ -90,10 +97,7 @@ ul.nav a:hover { color: #fff !important; }
     width: 100%;
     background: rgba(42, 42, 42, 0.8);
     text-align: left;
-}
-=======
-    
-}
+            }
 
  .loadingIndicator {
             display: block;
@@ -176,7 +180,6 @@ ul.nav a:hover { color: #fff !important; }
             background: rgba(42, 42, 42, 0.8);
             text-align: left;
         }
->>>>>>> 01547c4633e1c08cd0cabdf7a91a2ef02f92949d
 
 #citydb_layerlistpanel input{
     margin-right: 5px;
@@ -193,8 +196,19 @@ ul.nav a:hover { color: #fff !important; }
 }
 
 .navbar {
+    /* top:30%;*/
+    background: rgba(255, 255, 255, 1) !important;
     margin-bottom: 0;
     border-radius: 0;
+}
+
+
+
+
+.navbar-nav>li>a {
+    padding-top: 47px;
+    padding-bottom: 31px;
+    font-size: 28px;
 }
 
 /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
@@ -208,21 +222,24 @@ ul.nav a:hover { color: #fff !important; }
 }
 #cesiumContainer{
 
-    left: 0px;
+    left: 5%;
+    right: 5%;
     position: absolute;
-    width: 100%;
-    height: 94%;
+    width: 85%;
+    height: 80%;
     margin: 0;
     padding: 0px;
     overflow: hidden;
     z-index: -1;
+    border: 50px;
 }
 
 #uiMenu {
+    top:15%;
+    left:5%;
     border-radius: 20px;
     padding: 10px;
     position: absolute;
-    left: 0px;
     font-family: "Arial";
     z-index: 99999;
 }
@@ -233,4 +250,21 @@ ul.nav a:hover { color: #fff !important; }
     height: 30px;
     width: 142px;
     border: 1px solid rgba(255,255,255,.1);
+}
+
+#HCU_logo{
+display: block; 
+position: absolute; 
+bottom: 5px;
+left: 70px;
+bottom: 6px;
+}
+
+#citydb_cachedTilesInspector{
+    display: block;
+    position: absolute;
+    bottom: 5px;
+    right: 145px;
+    font-size: 9pt;
+    width: 180px;
 }
