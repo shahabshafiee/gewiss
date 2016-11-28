@@ -4,17 +4,13 @@
 
 
 }
-ul.nav a:hover { color: #fff !important; }
-
+/*ul.nav a:hover { color: #fff !important; }
+*/
 
 element.style {
     background: rgba(255, 255, 255, 1);
     border-color: rgba(95, 95, 95, 0.5);
     
-}
-.bottom-container{
-
-
 }
 
 .loadingIndicator {
@@ -33,7 +29,9 @@ element.style {
     background-image: url(../theme/img/ajax-loader.gif);
 
 }
-
+.new_logo{
+    
+}
 
 .citydb_overSelect {
     position: absolute;
@@ -206,9 +204,17 @@ element.style {
 
 
 .navbar-nav>li>a {
-    padding-top: 47px;
-    padding-bottom: 31px;
+     left: 20%;
+  right: 20%;
+  top: 50%;
+   border-left: 12px solid #9b59b6;
+    padding-top: 10px;
+    padding-bottom: 10px;
     font-size: 28px;
+    
+    margin-left: 11px;
+    margin-top: 44px;
+    margin-bottom: 6px;
 }
 
 /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
@@ -225,24 +231,16 @@ element.style {
     left: 5%;
     right: 5%;
     position: absolute;
-<<<<<<< HEAD
-    width: 90%;
-    height: 75%;
-=======
     width: 85%;
-    height: 80%;
->>>>>>> 87e78a591e163245ff39cfc5737a5848e4673620
+    height: 75%;
     margin: 0;
     padding: 0px;
     overflow: hidden;
     z-index: -1;
-<<<<<<< HEAD
     border: 5px;
     border-style: solid;
     border-bottom-color: black;
-=======
     border: 50px;
->>>>>>> 87e78a591e163245ff39cfc5737a5848e4673620
 }
 
 #uiMenu {
@@ -261,6 +259,7 @@ element.style {
     height: 30px;
     width: 142px;
     border: 1px solid rgba(255,255,255,.1);
+    border-left: 10px solid #000000 ;
 }
 
 #HCU_logo{
@@ -278,4 +277,69 @@ bottom: 6px;
     right: 145px;
     font-size: 9pt;
     width: 180px;
+}
+
+
+
+
+/*@import url(https://fonts.googleapis.com/css?family=Raleway:400,500,800);*/
+.snip1217 {
+    margin-top: 45px;
+  font-family: 'Raleway', Arial, sans-serif;
+  text-align: left;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+.snip1217 * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+}
+.snip1217 li {
+  display: inline-block;
+  list-style: outside none none;
+  margin: 0.5em 1.5em;
+  padding: 0;
+}
+.snip1217 a {
+  padding: 0.3em 0;
+  color: rgba(0, 0, 0, 1);
+  position: relative;
+  text-decoration: none;
+  display: inline-block;
+}
+.snip1217 a:before,
+.snip1217 a:after {
+  height: 3px;
+  position: absolute;
+  content: '';
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+  background-color: #995533;
+  width: 0;
+}
+.snip1217 a:before {
+  top: 0;
+  left: 0;
+  
+}
+.snip1217 a:after {
+  bottom: 0;
+  right: 0;
+}
+.snip1217 a:hover,
+.snip1217 .current a {
+  color: #994411;
+}
+.snip1217 a:hover:before,
+.snip1217 .current a:before,
+.snip1217 a:hover:after,
+.snip1217 .current a:after {
+  width: 100%;
+}
+/* Demo purposes only */
+body {
+  background-color: #000000;
+  padding: 50px 0;
 }
