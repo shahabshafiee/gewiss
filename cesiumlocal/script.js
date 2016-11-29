@@ -59,17 +59,18 @@
 		thematicDataUrl: "https://www.google.com/fusiontables/DataSource?docid=1IKfUy39P82_fXBG8ncu9758AD2jlJMUYtFCiRTiK",
 		cityobjectsJsonUrl: "",
 		//for 100-100
-		//minLodPixels : "250",
-		/*
+		minLodPixels : "120",
+		maxLodPixels : "-1",
+		
 		maxSizeOfCachedTiles : 70,
-		maxCountOfVisibleTiles : 30*/
+		maxCountOfVisibleTiles : 50
 
 
 		//for 500-00
-		minLodPixels : "1",
+		/*minLodPixels : "1",
 		maxLodPixels : "-1",
 		maxSizeOfCachedTiles : 500,
-		maxCountOfVisibleTiles : 350
+		maxCountOfVisibleTiles : 350*/
 	};  	
   	Cesium.knockout.track(addLayerViewModel);
 	Cesium.knockout.applyBindings(addLayerViewModel, document.getElementById('citydb_addlayerpanel'));
@@ -514,25 +515,7 @@
                 
 			}
 		});
-		
-        
-        //shahab
-        
-//			var x = document.getElementById("a6caa080-605c-4514-abb9-90d789017b67");
-//	 			var materials = x.mesh._materials;
-//				for (var i = 0; i < materials.length; i++) {
-//					// do mouseOver highlighting
-//					materials[i].setValue('emission',Cesium.Cartesian4.fromColor(mouseOverhighlightColor));
-//				} 
-			
-		
-        
-        
-        
-        
-        
-        
-        
+		   
 	 	citydbKmlLayer.registerEventHandler("MOUSEOUT", function(object) {
 	 		var primitive = object.primitive;
 	 		var targetEntity = object.id;
@@ -1220,17 +1203,3 @@ function changeToGE(){
     addLayerViewModel.url = "http://localhost/dashboard/hh-complete-100-100/hh-complete_GEOMETRY_MasterJSON.json",
 		addLayerViewModel.name = "Geometry"
                             }
-
-function Berlin(){
-    addLayerViewModel.url = "http://localhost/dashboard/Berlin_New/Berlin_Buildings_rgbTexture_collada_MasterJSON.json",
-
-        addLayerViewModel.name = "Berlin"
-
-}
-
-//var setRed = function(){
-//      setStyle(Cesium.Color.CRIMSON);
-//    } 
-//
-//
-
